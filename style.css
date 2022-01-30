@@ -1,0 +1,46 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Roboto Mono;
+    text-align: center;
+}
+body {
+    margin: 0px;
+    overflow: hidden;
+    background: #000000;
+}
+
+/* div{
+    position: absolute;
+    top: %;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+} */
+
+h1{
+    color: white;
+    font-size: 50px;
+
+}
+
+h2{
+    color: white;
+    font-size: 100px;
+}
+
+h3{
+    color: white;
+    font-size: 50px;
+    font-weight: lighter;
+}
+
+.webgl{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
