@@ -1,4 +1,3 @@
-# treejs
-# starter kit
+# treejs - starter kit
 
 https://fabcreative.github.io/threejs/
