@@ -33,7 +33,7 @@ import {OrbitControls} from 'https://unpkg.com/three@0.127.0/examples/jsm/contro
 // controls
 	const controls = new OrbitControls(camera, canvas)
 
-	controls.enableZoom = true;
+	controls.enableZoom = false;
 	controls.enableDamping = true
 
 // create the renderer
