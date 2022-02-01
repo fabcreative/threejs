@@ -1,6 +1,6 @@
 // import three modules 
 
-import * as THREE from 'https://unpkg.com/three@0.137.0/build/three.module.js';
+import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js';
 
 import {OrbitControls} from 'https://unpkg.com/three@0.127.0/examples/jsm/controls/OrbitControls.js'
 
@@ -45,6 +45,9 @@ import {OrbitControls} from 'https://unpkg.com/three@0.127.0/examples/jsm/contro
 // set the pixel ratio so that our scene will look good on HiDPI displays
 	renderer.setPixelRatio(window.devicePixelRatio);
 
+// set listen for resize event
+	window.addEventListener('resize', onWindowResize, false);
+
 // set the animation function to loop
 	renderer.setAnimationLoop( animation );
 
@@ -59,4 +62,11 @@ import {OrbitControls} from 'https://unpkg.com/three@0.127.0/examples/jsm/contro
 
 	renderer.render( scene, camera );
 
+	}
+
+// resize
+	function onWindowResize() {
+		camera.aspect = window.innerWidth / window.innerHeight;
+		camera.updateProjectionMatrix();
+		renderer.setSize(window.innerWidth, window.innerHeight);
 	}
