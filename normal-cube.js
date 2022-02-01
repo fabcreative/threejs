@@ -11,7 +11,7 @@ import {OrbitControls} from 'https://unpkg.com/three@0.127.0/examples/jsm/contro
 	const scene = new THREE.Scene();
 
 // set the background color
-	scene.background = new THREE.Color(0x000000);
+	scene.background = new THREE.Color(0x000000, 0);
 
 // create a camera
 	const camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 10 );
@@ -37,7 +37,7 @@ import {OrbitControls} from 'https://unpkg.com/three@0.127.0/examples/jsm/contro
 	controls.enableDamping = true
 
 // create the renderer
-	const renderer = new THREE.WebGLRenderer( { antialias: true } );
+	const renderer = new THREE.WebGLRenderer( { antialias: true, alpha: false } );
 
 // set the renderer to the same size as our container element
 	renderer.setSize( window.innerWidth, window.innerHeight );
@@ -62,11 +62,11 @@ import {OrbitControls} from 'https://unpkg.com/three@0.127.0/examples/jsm/contro
 
 	renderer.render( scene, camera );
 
-	}
+	};
 
 // resize
 	function onWindowResize() {
 		camera.aspect = window.innerWidth / window.innerHeight;
 		camera.updateProjectionMatrix();
 		renderer.setSize(window.innerWidth, window.innerHeight);
-	}
+	};
