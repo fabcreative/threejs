@@ -5,7 +5,7 @@ import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js';
 import {OrbitControls} from 'https://unpkg.com/three@0.127.0/examples/jsm/controls/OrbitControls.js'
 
 // get a reference to the container element that will hold our scene
-	// const canvas = document.querySelector('canvas.webgl')
+const canvas = document.querySelector('canvas.webgl')
 
 var renderer, scene, camera, composer, circle, skelet, particle;
 
@@ -20,7 +20,9 @@ function init() {
 	renderer.setSize(window.innerWidth, window.innerHeight);
 	renderer.autoClear = false;
 	renderer.setClearColor(0x000000, 0.0);
-	document.getElementById('canvas').appendChild(renderer.domElement);
+	// document.getElementById('canvas').appendChild(renderer.domElement);
+	document.body.appendChild( renderer.domElement );
+
 
 	
 	scene = new THREE.Scene();
@@ -95,7 +97,7 @@ function init() {
 		const controls = new OrbitControls(camera, canvas)
 
 		controls.enableZoom = false;
-		controls.enableDamping = false
+		controls.enableDamping = true;
 	
 };
 	
