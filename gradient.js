@@ -9,15 +9,17 @@ const canvas = document.querySelector('canvas.webgl')
 
 var renderer, scene, camera, composer, circle, skelet, particle;
 
+var factor = .5; // percentage of the screen
+
 window.onload = function() {
 	init();
 	animate();
 }
 	
 function init() {
-	renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+	renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
 	renderer.setPixelRatio((window.devicePixelRatio) ? window.devicePixelRatio : 1);
-	renderer.setSize(window.innerWidth, window.innerHeight);
+	renderer.setSize(window.innerWidth * factor, window.innerHeight * factor);
 	renderer.autoClear = false;
 	renderer.setClearColor(0x000000, 0.0);
 	// document.getElementById('canvas').appendChild(renderer.domElement);
@@ -100,9 +102,10 @@ function init() {
 };
 	
 function onWindowResize() {
+	
 	camera.aspect = window.innerWidth / window.innerHeight;
 	camera.updateProjectionMatrix();
-	renderer.setSize(window.innerWidth, window.innerHeight);
+	renderer.setSize(window.innerWidth * factor, window.innerHeight * factor);
 };
 	
 function animate() {
