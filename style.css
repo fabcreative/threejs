@@ -1,26 +1,33 @@
 *{
-    margin: 0px;
+    margin: auto;
     padding: 0px;
     font-family: Tenor Sans;
     text-align: center;
+
 }
+
 body {
-    margin: 0px;
-    overflow: hidden;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    /* overflow: hidden; */
     background: #ffffff;
+    /* border-color: yellow;
+    border-width: 3px;
+    border-style: solid; */
 
     /* background: -webkit-linear-gradient(top,  #11e8bb 0%,#8200c9 100%); */
 }
 
 /* div{
     position: absolute;
-    top: 10%;
+    top: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    height: 10%;
+    height: 100%;
 } */
 
 h1{
@@ -50,6 +57,10 @@ a{
 
     margin: auto;
     cursor: grab;
+    /* border-color: yellow;
+    border-width: 3px;
+    border-style: solid; */
+
 
 }
 
