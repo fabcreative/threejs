@@ -3,13 +3,13 @@
     padding: 0px;
     font-family: Tenor Sans;
     text-align: center;
+    width: fit-content;
+    height: fit-content;
 
 }
 
 body {
     margin: auto;
-    width: fit-content;
-    height: fit-content;
     /* overflow: hidden; */
     background: #ffffff;
     /* border-color: yellow;
