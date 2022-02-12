@@ -5,11 +5,11 @@ import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js';
 import {OrbitControls} from 'https://unpkg.com/three@0.127.0/examples/jsm/controls/OrbitControls.js'
 
 // get a reference to the container element that will hold our scene
-const canvas = document.querySelector('canvas.webgl')
+// const canvas = document.querySelector('canvas.webgl')
 
 var renderer, scene, camera, composer, circle, skelet, particle;
 
-var factor = 1; // percentage of the screen
+var factor = .5; // percentage of the screen
 
 window.onload = function() {
 	init();
@@ -17,13 +17,13 @@ window.onload = function() {
 }
 	
 function init() {
-	renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+	renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 	renderer.setPixelRatio((window.devicePixelRatio) ? window.devicePixelRatio : 1);
 	renderer.setSize(window.innerWidth * factor, window.innerHeight * factor);
 	renderer.autoClear = false;
 	renderer.setClearColor(0x000000, 0.0);
-	// document.getElementById('canvas').appendChild(renderer.domElement);
-	document.body.appendChild( renderer.domElement );
+	document.getElementById('canvas').appendChild(renderer.domElement);
+	// document.body.appendChild( renderer.domElement );
 
 	scene = new THREE.Scene();
 	
@@ -91,7 +91,7 @@ function init() {
 	scene.add( lights[2] );
 	  
 	
-	window.addEventListener('resize', onWindowResize, false);
+	// window.addEventListener('resize', onWindowResize, false);
 
 	// controls
 		const controls = new OrbitControls(camera, canvas)
