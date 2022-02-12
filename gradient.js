@@ -9,7 +9,7 @@ const canvas = document.querySelector('canvas.webgl')
 
 var renderer, scene, camera, composer, circle, skelet, particle;
 
-var factor = .5; // percentage of the screen
+var factor = 1; // percentage of the screen
 
 window.onload = function() {
 	init();

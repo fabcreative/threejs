@@ -48,15 +48,13 @@ a{
 
 .webgl{
 
-    top: 0;
     margin: auto;
     cursor: grab;
 
 }
 
 .webgl:active{
-
-    top: 0;
+    
     margin: auto;
     cursor: grabbing;
 
